@@ -14,12 +14,14 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import PhoneIcon from '@mui/icons-material/Phone';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
+import { useAuth } from '../context/AuthContext'; 
 
 const AdminDashboard = () => {
   const [reservations, setReservations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const { logout } = useAuth();
 
   const [deleteConfirmId, setDeleteConfirmId] = useState(null);
 
@@ -50,7 +52,7 @@ const AdminDashboard = () => {
       setLoading(false);
     } catch (err) {
       if (err.response && err.response.status === 401) {
-           localStorage.removeItem('adminToken');
+           logout();
            navigate('/login');
       }
       setError('Błąd pobierania danych.');
@@ -64,7 +66,6 @@ const AdminDashboard = () => {
 
   const handleEditClick = (res) => {
     setDeleteConfirmId(null);
-    
     setCurrentRes(res);
     setFormData({
       status: res.status,
@@ -127,7 +128,7 @@ const AdminDashboard = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('adminToken');
+    logout();
     navigate('/login');
   };
 

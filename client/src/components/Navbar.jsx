@@ -3,12 +3,11 @@ import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import CarRentalIcon from '@mui/icons-material/CarRental';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import LoginIcon from '@mui/icons-material/Login';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
-  const location = useLocation();
-
-  const isAdminLoggedIn = !!localStorage.getItem('adminToken');
+  const { admin } = useAuth();
 
   return (
     <AppBar position="static">
@@ -26,7 +25,7 @@ const Navbar = () => {
           Oferta Aut
         </Button>
 
-        {isAdminLoggedIn ? (
+        {admin ? (
           <Button 
             color="inherit" 
             component={Link} 

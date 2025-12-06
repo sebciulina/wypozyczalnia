@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Container, Box, Typography, TextField, Button, Alert, Paper } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Avatar from '@mui/material/Avatar';
+import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const Login = () => {
   const [error, setError] = useState(null);
   
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const { email, password } = formData;
 
@@ -27,11 +29,10 @@ const Login = () => {
     try {
       const { data } = await axios.post('/api/auth/login', { email, password });
 
-      localStorage.setItem('adminToken', data.token);
-      
-      localStorage.setItem('userInfo', JSON.stringify(data));
 
-      navigate('/admin');
+      login(data.token, data);
+
+      navigate('/admin'); 
 
     } catch (err) {
       const errorMsg = err.response?.data?.message || 'Błąd logowania';
