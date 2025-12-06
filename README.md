@@ -15,21 +15,23 @@
 ---
 
 ## 📋 Spis treści
-- [O projekcie](#o-projekcie)
-- [Funkcjonalności](#funkcjonalności)
-- [Technologie](#technologie)
-- [Instalacja i Uruchomienie](#instalacja-i-uruchomienie)
-- [Zmienne Środowiskowe](#zmienne-środowiskowe)
-- [API Endpoints](#api-endpoints)
-- [Autor](#autor)
+* [O projekcie](#o-projekcie)
+* [Funkcjonalności](#funkcjonalności)
+* [Technologie](#technologie)
+* [Instalacja i Uruchomienie](#instalacja-i-uruchomienie)
+* [Zmienne Środowiskowe](#zmienne-środowiskowe)
+* [API Endpoints](#api-endpoints)
+* [Autor](#autor)
 
 ---
 
+<a id="o-projekcie"></a>
 ## 🧐 O projekcie
 Celem projektu było stworzenie systemu dla wypożyczalni samochodów, który upraszcza proces rezerwacji. Kluczowym elementem jest **interaktywny kalendarz**, który wizualizuje dostępność aut, zapobiegając konfliktom terminów. Aplikacja posiada również zabezpieczony **Panel Administratora** do zarządzania rezerwacjami.
 
 ---
 
+<a id="funkcjonalności"></a>
 ## 🚀 Funkcjonalności
 
 ### 👤 Dla Użytkownika (Klienta):
@@ -64,6 +66,7 @@ Aby przetestować funkcjonalności **Panelu Administratora** (edycja, usuwanie r
 | :--- | :--- | :--- |
 | **Administrator** | `admin@admin.com` | `P@ssw0rd` |
 
+<a id="technologie"></a>
 ## 🛠 Technologie
 
 Projekt został zrealizowany w architekturze **Monorepo** (Frontend i Backend w jednym repozytorium).
@@ -82,6 +85,7 @@ Projekt został zrealizowany w architekturze **Monorepo** (Frontend i Backend w 
 
 ---
 
+<a id="instalacja-i-uruchomienie"></a>
 ## ⚙️ Instalacja i Uruchomienie
 
 Aby uruchomić projekt lokalnie, wykonaj następujące kroki:
@@ -121,6 +125,7 @@ Aby uruchomić projekt lokalnie, wykonaj następujące kroki:
 
 ---
 
+<a id="zmienne-środowiskowe"></a>
 ## 🔐 Zmienne Środowiskowe (.env)
 
 Stwórz plik `.env` w głównym katalogu projektu i uzupełnij go swoimi danymi:
@@ -134,6 +139,7 @@ NODE_ENV=development
 
 ---
 
+<a id="api-endpoints"></a>
 ## 📡 API Endpoints
 
 Lista dostępnych ścieżek API:
@@ -151,6 +157,7 @@ Lista dostępnych ścieżek API:
 
 ---
 
+<a id="autor"></a>
 ## 👨‍💻 Autor
 Sebastian Gransicki
 * Student Informatyki
