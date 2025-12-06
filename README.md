@@ -1,5 +1,9 @@
 # 🚗 System Rezerwacji Samochodów (Car Rental App)
 
+> 🔴 **LIVE DEMO:** [Kliknij tutaj, aby zobaczyć aplikację](https://wypozyczalnia-projekt.onrender.com)
+
+---
+
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
@@ -52,7 +56,13 @@ Celem projektu było stworzenie systemu dla wypożyczalni samochodów, który up
     * Kolorowe statusy rezerwacji (Potwierdzona, Anulowana, Zakończona).
 * **Edycja i Usuwanie:** Możliwość zmiany statusu rezerwacji oraz jej anulowania (z potwierdzeniem).
 
----
+## 🔑 Dane do logowania (Konto Testowe)
+
+Aby przetestować funkcjonalności **Panelu Administratora** (edycja, usuwanie rezerwacji), użyj poniższych danych:
+
+| Rola | Email | Hasło |
+| :--- | :--- | :--- |
+| **Administrator** | `admin@admin.com` | `P@ssw0rd` |
 
 ## 🛠 Technologie
 
