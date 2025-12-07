@@ -1,6 +1,6 @@
-# 🚗 System Rezerwacji Samochodów (Car Rental App)
+# 🚗 Car Reservation System (Car Rental App)
 
-> 🔴 **LIVE DEMO:** [Kliknij tutaj, aby zobaczyć aplikację](https://wypozyczalnia-projekt.onrender.com)
+> 🔴 **LIVE DEMO:** [Click here to view the application](https://wypozyczalnia-projekt.onrender.com)
 
 ---
 
@@ -10,130 +10,133 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
 
-> Projekt zaliczeniowy: Interaktywna aplikacja internetowa typu Full-Stack (MERN) umożliwiająca przeglądanie floty, sprawdzanie dostępności w czasie rzeczywistym oraz rezerwację pojazdów.
+> Final Project: An interactive Full-Stack (MERN) web application that allows users to browse the fleet, check real-time availability, and reserve vehicles.
 
 ---
 
-## 📋 Spis treści
-* [O projekcie](#o-projekcie)
-* [Funkcjonalności](#funkcjonalności)
-* [Technologie](#technologie)
-* [Instalacja i Uruchomienie](#instalacja-i-uruchomienie)
-* [Zmienne Środowiskowe](#zmienne-środowiskowe)
+## 📋 Table of Contents
+* [About the Project](#about-the-project)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Installation and Setup](#installation-and-setup)
+* [Environment Variables](#environment-variables)
 * [API Endpoints](#api-endpoints)
-* [Autor](#autor)
+* [Author](#author)
 
 ---
 
-<a id="o-projekcie"></a>
-## 🧐 O projekcie
-Celem projektu było stworzenie systemu dla wypożyczalni samochodów, który upraszcza proces rezerwacji. Kluczowym elementem jest **interaktywny kalendarz**, który wizualizuje dostępność aut, zapobiegając konfliktom terminów. Aplikacja posiada również zabezpieczony **Panel Administratora** do zarządzania rezerwacjami.
+<a id="about-the-project"></a>
+## 🧐 About the Project
+The goal of this project was to create a system for a car rental company that simplifies the reservation process. A key element is the **interactive calendar**, which visualizes car availability, preventing scheduling conflicts. The application also features a secured **Admin Panel** for managing reservations.
 
 ---
 
-<a id="funkcjonalności"></a>
-## 🚀 Funkcjonalności
+<a id="features"></a>
+## 🚀 Features
 
-### 👤 Dla Użytkownika (Klienta):
-* **Przeglądanie Floty:** Lista dostępnych samochodów z podziałem na karty.
-* **Filtrowanie i Sortowanie:**
-    * Wyszukiwanie po marce lub modelu (Live Search).
-    * Sortowanie po cenie (rosnąco/malejąco) oraz dostępności.
-* **Interaktywny Kalendarz:**
-    * Wizualizacja zajętych terminów (oznaczone kolorem).
-    * Wybór terminu poprzez zaznaczenie zakresu dni (Drag & Drop).
-    * Blokada wyboru dat historycznych oraz zajętych.
-* **Formularz Rezerwacji:**
-    * Automatyczne uzupełnianie dat z kalendarza.
-    * Kalkulacja kosztu całkowitego w czasie rzeczywistym.
-    * Walidacja danych (poprawność emaila, nr telefonu).
-    * Możliwość dodania uwag do rezerwacji.
-* **Responsywność:** Pełne dostosowanie do urządzeń mobilnych (Modal na pełen ekran, uproszczony kalendarz).
+### 👤 For Users (Clients):
+* **Fleet Browsing:** A list of available cars displayed as cards.
+* **Filtering and Sorting:**
+    * Search by make or model (Live Search).
+    * Sort by price (ascending/descending) and availability.
+* **Interactive Calendar:**
+    * Visualization of booked dates (color-coded).
+    * Date selection via day range highlighting (Drag & Drop).
+    * Blocking selection of past and booked dates.
+* **Reservation Form:**
+    * Automatic date pre-filling from the calendar.
+    * Real-time total cost calculation.
+    * Data validation (email and phone number correctness).
+    * Option to add notes to the reservation.
+* **Responsiveness:** Fully adapted for mobile devices (Full-screen modal, simplified calendar).
 
-### 🛡️ Dla Administratora:
-* **Autentykacja:** Bezpieczne logowanie przy użyciu JWT (JSON Web Token).
-* **Panel Zarządzania (Dashboard):**
-    * Przegląd wszystkich rezerwacji w formie tabeli.
-    * Widok szczegółów klienta (telefon, email, notatki).
-    * Kolorowe statusy rezerwacji (Potwierdzona, Anulowana, Zakończona).
-* **Edycja i Usuwanie:** Możliwość zmiany statusu rezerwacji oraz jej anulowania (z potwierdzeniem).
+### 🛡️ For Administrators:
+* **Authentication:** Secure login using JWT (JSON Web Token).
+* **Management Dashboard:**
+    * Overview of all reservations in a table format.
+    * View client details (phone, email, notes).
+    * Color-coded reservation statuses (Confirmed, Cancelled, Completed).
+* **Editing and Deleting:** Ability to change reservation status and cancel reservations (with confirmation).
 
-## 🔑 Dane do logowania (Konto Testowe)
+<a id="demo-credentials"></a>
+## 🔑 Demo Credentials (Test Account)
 
-Aby przetestować funkcjonalności **Panelu Administratora** (edycja, usuwanie rezerwacji), użyj poniższych danych:
+To test the **Admin Panel** functionalities (editing, deleting reservations), use the credentials below:
 
-| Rola | Email | Hasło |
+| Role | Email | Password |
 | :--- | :--- | :--- |
-| **Administrator** | `admin@admin.com` | `P@ssw0rd` |
+| **Admin** | `admin@admin.com` | `P@ssw0rd` |
 
-<a id="technologie"></a>
-## 🛠 Technologie
+---
 
-Projekt został zrealizowany w architekturze **Monorepo** (Frontend i Backend w jednym repozytorium).
+<a id="technologies"></a>
+## 🛠 Technologies
+
+The project was implemented using a **Monorepo** architecture (Frontend and Backend in a single repository).
 
 ### Frontend:
 * **React.js** (Hooks, Context API)
-* **Material UI (MUI)** - System komponentów i stylizacja.
-* **FullCalendar** - Zaawansowana obsługa kalendarza.
-* **Axios** - Komunikacja z API.
-* **React Router** - Nawigacja (SPA).
+* **Material UI (MUI)** - Component system and styling.
+* **FullCalendar** - Advanced calendar handling.
+* **Axios** - API communication.
+* **React Router** - Navigation (SPA).
 
 ### Backend:
-* **Node.js & Express** - Serwer aplikacji REST API.
-* **MongoDB & Mongoose** - Baza danych NoSQL i modelowanie danych.
-* **JWT & Bcrypt** - Autentykacja i haszowanie haseł.
+* **Node.js & Express** - REST API application server.
+* **MongoDB & Mongoose** - NoSQL database and data modeling.
+* **JWT & Bcrypt** - Authentication and password hashing.
 
 ---
 
-<a id="instalacja-i-uruchomienie"></a>
-## ⚙️ Instalacja i Uruchomienie
+<a id="installation-and-setup"></a>
+## ⚙️ Installation and Setup
 
-Aby uruchomić projekt lokalnie, wykonaj następujące kroki:
+To run the project locally, follow these steps:
 
-1.  **Sklonuj repozytorium:**
+1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/TWOJA_NAZWA/wypozyczalnia.git](https://github.com/TWOJA_NAZWA/wypozyczalnia.git)
+    git clone https://github.com/sebciulina/wypozyczalnia.git
     cd wypozyczalnia
     ```
 
-2.  **Zainstaluj zależności (Backend):**
+2.  **Install dependencies (Backend):**
     ```bash
     npm install
     ```
 
-3.  **Zainstaluj zależności (Frontend):**
+3.  **Install dependencies (Frontend):**
     ```bash
     cd client
     npm install
     cd ..
     ```
 
-4.  **Skonfiguruj zmienne środowiskowe:**
-    Stwórz plik `.env` w głównym katalogu (patrz sekcja niżej).
+4.  **Configure environment variables:**
+    Create a `.env` file in the main directory (see section below).
 
-5.  **Uruchom aplikację (Tryb Deweloperski):**
+5.  **Run the application (Development Mode):**
     ```bash
-    # Uruchamia jednocześnie serwer i klienta (wymaga zainstalowanego concurrently)
+    # Runs both server and client concurrently (requires concurrently installed)
     npm run dev 
     
-    # LUB osobno w dwóch terminalach:
+    # OR separately in two terminals:
     # Terminal 1:
     npm run server
-    # Terminal 2 (w folderze client):
+    # Terminal 2 (inside client folder):
     npm start
     ```
 
 ---
 
-<a id="zmienne-środowiskowe"></a>
-## 🔐 Zmienne Środowiskowe (.env)
+<a id="environment-variables"></a>
+## 🔐 Environment Variables (.env)
 
-Stwórz plik `.env` w głównym katalogu projektu i uzupełnij go swoimi danymi:
+Create a `.env` file in the main project directory and fill it with your data:
 
 ```env
 PORT=5000
 MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/wypozyczalnia
-JWT_SECRET=tajny_ciag_znakow
+JWT_SECRET=your_secret_string
 NODE_ENV=development
 ```
 
@@ -142,23 +145,23 @@ NODE_ENV=development
 <a id="api-endpoints"></a>
 ## 📡 API Endpoints
 
-Lista dostępnych ścieżek API:
+List of available API routes:
 
 
 | Metoda | Endpoint     | Opis                      | Dostęp   |
 | :-------- | :------- | :------------------------- | :------- |
-| `GET` | `/api/cars` | Pobiera listę wszystkich samochodów | Publiczny|
-| `GET` | `/api/reservations?carId=X` | Pobiera listę wszystkich samochodów | Publiczny|
-| `POST` | `/api/reservations` | Tworzy nową rezerwację | Publiczny|
-| `POST` | `/api/auth/login` | Logowanie administratora | Publiczny|
-| `GET` | `/api/reservations` | Pobiera wszystkie rezerwacje | Admin|
-| `PUT` | `/api/reservations/:id` | Edytuje rezerwację | Admin|
-| `DELETE` | `/api/reservations/:id` | Usuwa rezerwację | Admin|
+| `GET` | `/api/cars` | Fetches a list of all cars | Public|
+| `GET` | `/api/reservations?carId=X` | Fetches reservations for a specific car| Public|
+| `POST` | `/api/reservations` | Creates a new reservation | Public|
+| `POST` | `/api/auth/login` | Administrator login | Public|
+| `GET` | `/api/reservations` | Fetches all reservations | Admin|
+| `PUT` | `/api/reservations/:id` | Edits a reservation | Admin|
+| `DELETE` | `/api/reservations/:id` |Deletes a reservation | Admin|
 
 ---
 
-<a id="autor"></a>
-## 👨‍💻 Autor
+<a id="author"></a>
+## 👨‍💻 Author
 Sebastian Gransicki
-* Student Informatyki
+* Computer Science Student
 * [@sebciulina](https://www.github.com/sebciulina)
